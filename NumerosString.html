@@ -5,10 +5,29 @@
     <title></title>
     <script type="text/javascript">
         function sumar() {
+            //var x = "56";
+            //var y = 0;
+            //x.split('').forEach(x => y += parseInt(x));
+            //var cajanumeros = document.getElementById("numeros");
+            //var x = cajanumeros.value;
+            //var y = 0;
+            //var resultado = document.getElementById("resultado");
+            //resultado.innerHTML = x.split("").forEach(x => y += parseInt(x));
+            //for (var i = 0; i < numSplit; i++) {
+            //    resultado.innerHTML = parseInt(numSplit++);
+            //}
+        }
+        function sumar() {
             var cajanumeros = document.getElementById("numeros");
             var numeros = cajanumeros.value;
-            var resultado = document.getElementById("resultado");
-            
+            var suma = 0;
+            var media = 0;
+            for (var i = 0; i < numeros.length; i++) {
+                suma += parseInt(numeros[i]);
+                media = suma / numeros.length;
+                
+            }
+            document.getElementById("resultado").innerHTML = "La Suma de los valores de " + numeros + " es: " + suma + "<br/>" + " Y la media: " + media;
         }
     </script>
 </head>
